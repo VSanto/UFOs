@@ -35,12 +35,11 @@ data.forEach((dataRow) => {
       // rows where the `datetime` value matches the filter value
       filteredData = filteredData.filter(row => row.datetime === date);
     }
-  
      // Rebuild the table using the filtered data
     // @NOTE: If no date was entered, then filteredData will
     // just be the original tableData.
-    buildTable(filteredData);
-  }
+    buildTable(filteredData)
+  };
   
   // Attach an event to listen for the form button
   d3.selectAll("#filter-btn").on("click", handleClick);
